@@ -1,7 +1,9 @@
 SUBDIRS=$(wildcard *)
 DONE=$(SUBDIRS:%=%/done)
 
-all: $(DONE)
+all:
+	@echo make all does nothing
+	@echo run make subdir/done
 
 %/done: %/Makefile %/Dockerfile
 	cd $(@D) && make
@@ -15,3 +17,4 @@ all: $(DONE)
 clean:
 	for d in $(SUBDIRS); do cd $d && make clean; done
 	rm -f */Makefile */Dockerfile
+
