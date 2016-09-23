@@ -16,6 +16,7 @@ push:
 
 run:
 	docker run -it $(IMG_TAG) bash
+	@true
 
 clean:
 	rm -rf done Dockerfile $(OPT_CLEAN)
