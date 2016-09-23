@@ -1,0 +1,8 @@
+FROM debian:8.6
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt update && \
+    apt upgrade -y && \
+    rm -rf /var/{lib,log,cache}/apt
+
