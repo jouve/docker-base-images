@@ -2,11 +2,11 @@ USER={{ user }}
 IMAGE=postgres-base
 TAG=0.1
 
-IMG_TAG = $(USER)/$(IMAGE):$(TAG)
+IMG_TAG = $(USER)/$(IMAGE)/$(TAG)
 
 all: done
 
-done: Dockerfile
+done: Dockerfile createcluster.sh
 	docker build --no-cache . -t $(IMG_TAG)
 	@touch done
 

@@ -1,4 +1,4 @@
-FROM {{ user }}/debian:16.09.22
+FROM {{ user }}/debian:16.09.22
 
 RUN apt update && \
     apt install -y postgresql postgresql-contrib && \

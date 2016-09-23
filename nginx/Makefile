@@ -2,7 +2,7 @@ USER={{ user }}
 IMAGE=nginx
 TAG=0.1
 
-IMG_TAG = $(USER)/$(IMAGE)/$(TAG)
+IMG_TAG = $(USER)/$(IMAGE):$(TAG)
 
 all: done
 
