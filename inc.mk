@@ -1,4 +1,4 @@
-USER=localhost
+USER?=localhost
 
 IMG_TAG=$(USER)/$(IMAGE):$(TAG)
 
